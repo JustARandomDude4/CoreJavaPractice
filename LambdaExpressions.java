@@ -1,6 +1,10 @@
 // Different use cases of lambda expressions:
-
-
+// Here we are using :  
+/*
+    1. Collections with user defined class Groceries as objjects
+    2. Uses Comparator to sort the list by name as well as sort by cost
+    3. Uses Lambda expressions  to print the list contents using forEach loop
+*/    
 import java.util.*;
 
 class Groceries
@@ -16,12 +20,12 @@ class Groceries
     {
         return this.item+" " + this.cost;
     }
+    
 }
-
-/*interface PriceCompare<T>   // a generic interface
+interface GenericInterfaceEg<T,E>
 {
-   public T sorting(T t);
-}*/
+    public E multiUseFunc(T ob);
+}
 
 class sortByName implements Comparator<Groceries>
 {
@@ -58,6 +62,10 @@ public class LambdaExpressions
         Collections.sort(l,new sortByCost());
 
             l.forEach((n)->System.out.println(n));
-
-    }
+    
+      /*           String nameList="";
+        // the generic interface is used for strings (item names)
+        GenericInterfaceEg<Groceries,String> ob=(name)->{  l.forEach((n)->nameList=nameList.concat(n.item+" ")); return nameList; };
+    */
+}
 }
