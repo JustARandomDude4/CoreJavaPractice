@@ -1,3 +1,5 @@
+//This code is solely dedicated to my little brother on this new year eve  :))
+
 import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.plaf.FontUIResource;
@@ -73,7 +75,7 @@ public class Gui implements ActionListener
         frame.getContentPane().setBackground(Color.green);
 
 
-        ImageIcon image1 =new ImageIcon("punch.jpg");  //create e icona image
+        ImageIcon image1 =new ImageIcon("Resources//punch.jpg");  //create e icona image
         Border border=BorderFactory.createLineBorder(Color.green,5);
         label.setText("Number of punches: 0");
         label.setIcon(image1);
@@ -83,9 +85,10 @@ public class Gui implements ActionListener
         label.setBackground(Color.orange);
         label.setOpaque(true);
         label.setBorder(border);
-        //label.setBounds(200,200,250,250);  //instead of pack() 
+
+        //  label.setBounds(200,200,250,250);  //instead of pack() 
         //  label.setHorizontalTextPosition(JLabel.CENTRE);
-        //    label.setVerticalTextPosition(JLabel.TOP);
+        //  label.setVerticalTextPosition(JLabel.TOP);
 
         frame.pack();    // Make sure u keep it at end after addign all components
     }
